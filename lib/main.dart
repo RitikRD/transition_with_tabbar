@@ -29,7 +29,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   int _currentPage = 1;
   final PageController _pageController = PageController(initialPage: 1);
 
@@ -48,7 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           children: <Widget>[
             Left(),
-            CenterPage(),
+            CenterPage(
+              pageController: _pageController,
+            ),
             Right(),
           ],
         ),
